@@ -1,0 +1,25 @@
+<p>
+  new-comps works!
+</p>
+
+<app-new-component></app-new-component>
+<!-- this is called property binding.. remember not use to use {{}} in property bindings because those are string iterpolations and 
+they should not be used 
+-->
+
+
+<!-- 
+  For event bindings we use () ex: (click) and name of the function to be called
+-->
+<button class="btn btn-primary" [disabled]="!allowButton" (click)="onClickSampleFunction()">Add Server </button>
+
+
+  <div [ngStyle]="{'background-color':'black'}">New server created
+  </div>
+
+
+<p>{{enteredValue}}</p>
+
+<!--Using $event object to capture input /// binding the input event to a function-->
+<input type="text" class="form-control" (input)="onEnteringText($event)">
+

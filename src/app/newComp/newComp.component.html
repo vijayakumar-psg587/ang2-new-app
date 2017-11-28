@@ -1,0 +1,12 @@
+<div id="newCompDiv1">
+
+    <!--this means that title will be displayed in select box but while selcting the value selected will be artist name 
+       <select data-ng-options="artist.name as artist.title for artist in artistDetails"></select> -->
+       
+
+       <select [(ngModel)]="selectedArtist.name">
+           <option *ngFor="let artist of artistDetails" value={{artist.name}}>
+               {{artist.name}}</option> 
+       </select>
+       <p>{{selectedArtist.name}}</p>
+</div>
